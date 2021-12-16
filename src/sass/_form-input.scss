@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 25px 0 25px 0;
+  background-color: #afeeee;
+}
+input {
+  border: none;
+  border-radius: 5px;
+  max-width: 200px;
+  background-color: transparent;
+  height: 30px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  &::placeholder {
+    padding-left: 20px;
+    font-family: 'Noto Sans Display', sans-serif;
+  }
+}
+
+.search-btn {
+  border: none;
+  border-radius: 5px;
+  max-width: 200px;
+  height: 30px;
+  font-family: 'Noto Sans Display', sans-serif;
+  background-color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  color: #808080;
+}
