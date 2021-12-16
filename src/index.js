@@ -9,7 +9,7 @@ import { getRefs } from './js/get-refs';
 const refs = getRefs();
 const apiImages = new ApiImages();
 
-refs.loadMoreBtn.classList.add('is-hidden');
+// refs.loadMoreBtn.classList.add('is-hidden');
 
 refs.form.addEventListener('submit', toLoadImg);
 refs.loadMoreBtn.addEventListener('click', toLoadMoreImg);
@@ -27,11 +27,11 @@ async function toLoadImg(evt) {
         return Notiflix.Notify.failure('Please enter any data you would like to find.');
     }
 
-    await apiImages.getImagesByName().then(response => {
+     apiImages.getImagesByName().then(response => {
         const hitsLength = response.data.hits.length;
         if (hitsLength === 0) {
              refs.gallery.innerHTML = '';
-            refs.loadMoreBtn.classList.add('is-hidden');
+            // refs.loadMoreBtn.classList.add('is-hidden');
             
             return Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
         }
@@ -45,7 +45,7 @@ async function toLoadImg(evt) {
 
 
 
-async function toLoadMoreImg() {
+ function toLoadMoreImg() {
     apiImages.getImagesByName().then(response => {
         const hitsLength = response.data.hits.length;
         console.log(hitsLength);
