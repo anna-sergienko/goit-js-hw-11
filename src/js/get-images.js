@@ -23,8 +23,4 @@ export default class ApiImages{
         this.page += 1;
     }
 
-    minusPage() {
-        this.page -= 1;
-    }
-
 }
